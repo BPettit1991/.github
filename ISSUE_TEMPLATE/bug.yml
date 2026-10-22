@@ -1,0 +1,59 @@
+name: Bug report
+description: Report something that is broken or behaves in the wrong way.
+title: "[Bug]: "
+labels: ["type: bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting this. Do not paste passwords, keys, or personal, client or participant data. Describe the record instead, for example "participant record 12", not the person's name.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem in a few short sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the steps that make the problem happen.
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. See the error
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Where did it happen?
+      description: Browser, device, site URL, or environment (live, staging, local).
+      placeholder: Chrome on Windows, live site
+    validations:
+      required: false
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: Pick the option that best fits the impact.
+      options:
+        - High (people cannot work, or data is at risk)
+        - Medium (a workaround exists)
+        - Low (cosmetic or minor)
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Add screenshots or logs. Remove personal data first.
+    validations:
+      required: false
