@@ -1,0 +1,34 @@
+name: Task
+description: Track a small ops, admin or maintenance job.
+title: "[Task]: "
+labels: ["type: chore"]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: What needs doing?
+      description: Describe the job in one or two sentences.
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: The GitHub username of the person who will do it.
+      placeholder: "@username"
+    validations:
+      required: false
+  - type: input
+    id: due
+    attributes:
+      label: Due date
+      placeholder: YYYY-MM-DD
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Add links or context. Leave out secrets and personal data.
+    validations:
+      required: false
